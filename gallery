@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input{
+    display: none;
+}
+
+.container{
+    width: 100%;
+    text-align: center;
+    margin-left: 0px;
+}
+
+h1{
+    font-weight: normal;
+    font-size: 35px;
+    position: relative;
+    margin: 40px 0;
+}
+
+h1::before{
+
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: tomato;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+
+
+.top-content{
+
+    background-color: aliceblue;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px lightgray;
+    border-top-left-radius:10px ;
+}
+
+h3{
+    height: 100%;
+    background-color: lightgray;
+    line-height: 60px;
+    padding: 0 50px;
+    color: white;
+}
+
+label{
+    display: inline-block;
+    height: 100%;
+    padding: 0 5px;
+    margin: 0 50px;
+    line-height: 60px;
+    color: gray;
+    cursor: pointer;
+    transition: .5s;
+}
+
+label:hover{
+    color: rgb(226, 43, 43);
+}
+.photo-gallery{
+width: 90%;
+margin: auto;
+
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 20px;
+
+}
+
+.pic{
+    position: relative;
+    height: 220px;
+    cursor: pointer;
+    box-shadow: 10px;
+
+}
+
+.pic img{
+    width: 1005;
+    height: 100%;
+    border-radius: 10px;
+}
+    </style>
+</head>
+<body>
+    
+    <input type="radio" name="photos" id="check1" checked>
+    <input type="radio" name="photos" id="check2">
+    <input type="radio" name="photos" id="check3">
+    <input type="radio" name="photos" id="check4">
+  
+
+    <div class="container">
+        <h1> Photo Gallery</h1>
+        <div class="top-content">
+            <h3>Photo Gallery</h3>
+            <label for="check1"> All</label>
+            <label for="check2"> modi</label>
+            <label for="check3"> Sharad Pawar</label>
+            <label for="check4"> Ajit Pawar</label>
+            <label for="check4"> Supriya sule</label>
+        </div>
+
+        <div class="photo-gallery">
+            <div class="pic modi">
+                <img src="./assets/1.jpg" alt="">
+            </div>
+            <div class="pic sharad-pawar">
+                <img src="./assets/2.jpg" alt="">
+            </div>
+            <div class="pic ajit-pawar">
+                <img src="./assets/3.jpg" alt="">
+            </div>
+            <div class="pic supriya-sule">
+                <img src="./assets/4.jpg" alt="">
+            </div>
+           
+        </div>
+
+    </div>
+
+
+</body>
+</html>
